@@ -1,0 +1,15 @@
+<h1> All Tweets </h1>
+<a href="/users">GO TO ALL USERS</a>
+
+
+  <div>
+    <ol>
+      <% @tweets.each do |tweet| %>
+
+        <li>
+          <p><%= tweet.message %> </p>
+        <a href="/tweets/<%= tweet.id %>" > VIEW THIS TWEET</a></li>
+      <% end %>
+    </ol>
+  </div>
+<%= will_paginate @tweets %>

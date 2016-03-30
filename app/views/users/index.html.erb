@@ -1,0 +1,13 @@
+<h1> All Users </h1>
+<a href="/tweets">GO TO ALL TWEETS</a>
+
+
+<div>
+  <ol>
+  <% @users.each do |user| %>
+    <li><p>Name: <%= user.name %> </p>
+    <p>Twitter Handle: <%= user.username %> </p>
+    <a href="/users/<%= user.id %>" > SHOW ALL TWEETS FOR THIS USER</a></li>
+  <% end %>
+  </ol>
+</div>

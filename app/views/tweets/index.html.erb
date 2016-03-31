@@ -3,13 +3,13 @@
 
 
   <div>
-    <ol>
+    <ul>
       <% @tweets.each do |tweet| %>
 
         <li>
           <p><%= tweet.message %> </p>
         <a href="/tweets/<%= tweet.id %>" > VIEW THIS TWEET</a></li>
       <% end %>
-    </ol>
+    </ul>
   </div>
 <%= will_paginate @tweets %>
